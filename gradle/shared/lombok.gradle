@@ -1,0 +1,16 @@
+apply from: 'gradle/shared/common.gradle'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  jcenter()
+  maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+  // lombok
+  compileOnly("org.projectlombok:lombok:${project.'lombok.version'}")
+  annotationProcessor("org.projectlombok:lombok:${project.'lombok.version'}")
+  testCompileOnly("org.projectlombok:lombok:${project.'lombok.version'}")
+  compileOnly("org.jetbrains:annotations:${project.'jetbrains-annotations.version'}")
+}

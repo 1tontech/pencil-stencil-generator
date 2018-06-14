@@ -1,0 +1,27 @@
+buildscript {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+  }
+  dependencies {
+    classpath "com.github.jengelman.gradle.plugins:shadow:${project.ext['shadow-plugin.version']}"
+  }
+}
+
+apply from: 'gradle/shared/lombok.gradle'
+apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+group 'in.oneton'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'in.oneton.pencil.stencil.generator.StencilDefinitionGenerator'
+
+dependencies {
+  compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+  compile "org.apache.commons:commons-text:${project.ext['common-text.version']}"
+  compile "net.sf.jopt-simple:jopt-simple:${project.ext['jopt-simple.version']}"
+}
