@@ -116,6 +116,8 @@ public class StencilDefinitionGenerator {
     writeStencil(definitionMetadata, stencilDestination);
     System.out
         .println("Pencil Stencil Definition file saved to " + stencilDestination.getAbsolutePath());
+    System.out
+        .println("To install the generated stencil collection\n\t1. Open Pencil\n\t2. Navigate to `Tools -> Manage Collections`\n\t3. Click on `Install from File`\n\t4. Select the file from path " + stencilDestination.getAbsolutePath() + "\n\t5. All icons from the specified collection are installed in your pencil now\n\nAll the best!!");
   }
 
   private static void writeStencil(DefinitionMetadata definitionMetadata, File stencilDestinationPath)
