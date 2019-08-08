@@ -10,6 +10,7 @@ import joptsimple.OptionSet;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
+import java.util.Locale;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -53,6 +54,7 @@ public class StencilDefinitionGenerator {
   private static final String XML_DEFINITION_SUFFIX = "</Shapes>";
 
   public static void main(String[] args) throws IOException {
+    Locale.setDefault(new Locale("en", "US"));	  
     OptionParser optionParser = new OptionParser();
 
     ArgumentAcceptingOptionSpec<IconSetType> typeOptionSpec =
