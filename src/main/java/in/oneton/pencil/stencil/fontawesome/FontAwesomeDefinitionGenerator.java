@@ -36,7 +36,7 @@ import static java.util.stream.Collectors.joining;
 public class FontAwesomeDefinitionGenerator implements DefinitionGenerator {
 
   public static final String FONT_AWESOME_FREE_METADATA_ICONS_JSON_URL =
-      "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/advanced-options/metadata/icons.json";
+      "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/metadata/icons.json";
 
   private final String iconMetadataSourcePath;
   private final String stencilDestinationNameOrPath;
